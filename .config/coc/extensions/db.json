@@ -1,0 +1,13 @@
+{
+  "extension": {
+    "coc-git": {
+      "disabled": true
+    },
+    "coc-yank": {
+      "disabled": true
+    },
+    "coc-tabnine": {
+      "disabled": true
+    }
+  }
+}

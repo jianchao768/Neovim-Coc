@@ -1,0 +1,105 @@
+14f4a3e4a9300d3c33f9dea6835e399d|file:///home/li/.config/nvim/init.vim|111|1|V|vim
+	            \ 'coc-json',
+8c986d31dae062397dc26c0c78406ae5|file:///home/li/.config/nvim/init.vim|113|1|V|vim
+	            \ 'coc-emmet',
+29c306d8dc62567199ef6c7a7ba83968|file:///home/li/.config/nvim/init.vim|313|1|V|vim
+	nmap <silent> <leader>t :TagbarToggle<CR>
+b0d70feb6b8d89e9a2b41a47584ec5ef|file:///home/li/.config/nvim/init.vim|289|13|V|vim
+	nmap <silent> <leader>v :TagbarToggle<CR>
+63973cd3ad7ccf2c8d5dce94b215f683|file:///home/li/workspace/2.cpp|5|12|v|cpp
+	expression
+7347a4bd3e36a38ffa95a178a3f85393|file:///home/li/workspace/2.cpp|13|14|v|cpp
+	int i
+ecdc40ea319a7fd3a8a38227f2e089c0|file:///home/li/.config/nvim/coc-settings.json|26|1|v|json
+	    "suggest.completionItemKindLabels": {
+	        "keyword": "\uf1de",
+	        "variable": "\ue79b",
+	        "value": "\uf89f",
+	        "operator": "\u03a8",
+	        "function": "\u0192",
+	        "reference": "\ufa46",
+	        "constant": "\uf8fe",
+	        "method": "\uf09a",
+	        "struct": "\ufb44",
+	        "class": "\uf0e8",
+	        "interface": "\uf417",
+	        "text": "\ue612",
+	        "enum": "\uf435",
+	        "enumMember": "\uf02b",
+	        "module": "\uf40d",
+	        "color": "\ue22b",
+	        "property": "\ue624",
+	        "field": "\uf9be",
+	        "unit": "\uf475",
+	        "event": "\ufacd",
+	        "file": "\uf723",
+	        "folder": "\uf114",
+	        "snippet": "\ue60b",
+	        "typeParameter": "\uf728",
+	        "default": "\uf29c"
+	    },
+	
+889888b787174599bbe43e704ddaf2f6|file:///home/li/.config/nvim/coc-settings.json|25|1|V|json
+	    "suggest.defaultSortMethod": "alphabetical",
+	    "diagnostic.warningSign": "!!",
+db926c97043fe2baf0784facffbdcd24|file:///home/li/.config/nvim/coc-settings.json|26|3|v|json
+	  "suggest.completionItemKindLabels": {
+	        "keyword": "\uf1de",
+	        "variable": "\ue79b",
+	        "value": "\uf89f",
+	        "operator": "\u03a8",
+	        "function": "\u0192",
+	        "reference": "\ufa46",
+	        "constant": "\uf8fe",
+	        "method": "\uf09a",
+	        "struct": "\ufb44",
+	        "class": "\uf0e8",
+	        "interface": "\uf417",
+	        "text": "\ue612",
+	        "enum": "\uf435",
+	        "enumMember": "\uf02b",
+	        "module": "\uf40d",
+	        "color": "\ue22b",
+	        "property": "\ue624",
+	        "field": "\uf9be",
+	        "unit": "\uf475",
+	        "event": "\ufacd",
+	        "file": "\uf723",
+	        "folder": "\uf114",
+	        "snippet": "\ue60b",
+	        "typeParameter": "\uf728",
+	        "default": "\uf29c"
+	    },
+	
+fea6772c0735b17a3237b6235f2162b1|file:///home/li/.config/nvim/coc-settings.json|26|1|V|json
+	    "suggest.completionItemKindLabels": {
+	        "keyword": "\uf1de",
+	        "variable": "\ue79b",
+	        "value": "\uf89f",
+	        "operator": "\u03a8",
+	        "function": "\u0192",
+	        "reference": "\ufa46",
+	        "constant": "\uf8fe",
+	        "method": "\uf09a",
+	        "struct": "\ufb44",
+	        "class": "\uf0e8",
+	        "interface": "\uf417",
+	        "text": "\ue612",
+	        "enum": "\uf435",
+	        "enumMember": "\uf02b",
+	        "module": "\uf40d",
+	        "color": "\ue22b",
+	        "property": "\ue624",
+	        "field": "\uf9be",
+	        "unit": "\uf475",
+	        "event": "\ufacd",
+	        "file": "\uf723",
+	        "folder": "\uf114",
+	        "snippet": "\ue60b",
+	        "typeParameter": "\uf728",
+	        "default": "\uf29c"
+	    },
+47f7c9c5e15a099775d9f922e5b8db0c|file:///home/li/.config/nvim/coc-settings.json|35|14|V|json
+	    "git.virtualTextPrefix":"⏰ ",
+aed419737b44693a401188416809bb09|file:///home/li/.config/nvim/coc-settings.json|35|14|V|json
+	    "git.addGBlameToVirtualText": true

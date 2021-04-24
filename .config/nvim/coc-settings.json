@@ -1,0 +1,36 @@
+{
+	"languageserver": {
+		"coc-clangd": {
+			"command": "clangd",
+			"rootPatterns": ["compile_flags.txt", "compile_commands.json"],
+			"filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]
+		}
+	},
+	"suggest.autoTrigger":"always",
+    "suggest.triggerAfterInsertEnter": true,
+    "suggest.timeout": 500,
+    "suggest.enablePreview": true,
+    "suggest.snippetIndicator": "$",
+    "suggest.minTriggerInputLength": 3,
+    "suggest.noselect": false,
+    "suggest.detailField": "abbr",
+    "suggest.maxPreviewWidth": 60,
+    "suggest.labelMaxLength": 80,
+    "suggest.triggerCompletionWait": 100,
+    "suggest.maxCompleteItemCount": 20,
+    "suggest.echodocSupport": true,
+    "suggest.enablePreselect": true,
+    "suggest.preferCompleteThanJumpPlaceholder": true,
+    "suggest.removeDuplicateItems": true,
+    "suggest.defaultSortMethod": "alphabetical",
+    "diagnostic.warningSign": "!!",
+    "diagnostic.errorSign": "✘",
+    "diagnostic.refreshOnInsertMode": true,
+    "codeLens.enable": true,
+    "clangd.disableSnippetCompletion": true,
+    "diagnostic.enable":false,
+    "coc.preferences.enableFloatHighlight": true,
+    "coc.preferences.hoverTarget":"float",
+    "coc.preferences.currentFunctionSymbolAutoUpdate":true
+}
+
