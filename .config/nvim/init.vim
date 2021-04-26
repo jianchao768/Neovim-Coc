@@ -3,13 +3,45 @@
 "set tags=/home/ts/workspace/code/oneplus/android/vendor/qcom/proprietary/tags  "oneplus"
 set tags=/home/ts/workspace/code/sm8350/android/vendor/qcom/proprietary/tags 
 
+
+" SHORTCUT SETTINGS: 
+" Set mapleader
+let mapleader=","
+" Space to command mode.
+nnoremap <space> :
+vnoremap <space> :
+" Switching between buffers.
+" ??
+nnoremap <C-h> <C-W>h
+nnoremap <C-j> <C-W>j
+nnoremap <C-k> <C-W>k
+nnoremap <C-l> <C-W>l
+inoremap <C-h> <Esc><C-W>h
+inoremap <C-j> <Esc><C-W>j
+inoremap <C-k> <Esc><C-W>k
+inoremap <C-l> <Esc><C-W>l
+" "cd" to change to open directory.
+let OpenDir=system("pwd")
+nmap <silent> <leader>cdr :exe 'cd ' . OpenDir<cr>:pwd<cr>
+nmap <silent> <leader>cdf :cd %:h<cr>:pwd<cr>
+
+
+" AUTO COMMANDS: 
+" auto expand tab to blanks
+autocmd FileType c,cpp set expandtab
+" Restore the last quit position when open file.
+" automaticly return last quit positon 
+autocmd BufReadPost *
+    \ if line("'\"") > 0 && line("'\"") <= line("$") |
+    \     exe "normal g'\"" |
+    \ endif
+
+
+
 " GENERAL SETTINGS: 
-" To use VIM settings, out of VI compatible mode.
 set nocompatible
 filetype plugin indent on
 syntax on
-" Config for vim72
-if v:version >= 702
 set autoindent
 set autoread
 set autowrite
@@ -54,25 +86,33 @@ set wildmenu
 set wildmode=list:longest,full
 set nowrap
 set updatetime=100
-endif
+set colorcolumn=+1
 
+" 设置状态行显示常用信息    
+" " %F 完整文件路径名    
+" " %m 当前缓冲被修改标记    
+" " %m 当前缓冲只读标记    
+" " %h 帮助缓冲标记    
+" " %w 预览缓冲标记    
+" " %Y 文件类型    
+" " %b ASCII值    
+" " %B 十六进制值    
+" " %l 行数    
+" " %v 列数    
+" " %p 当前行数占总行数的的百分比    
+" " %L 总行数    
+" " %{...} 评估表达式的值，并用值代替    
+" " %{"[fenc=".(&fenc==""?&enc:&fenc).((exists("+bomb") && &bomb)?"+":"")."]"} 显示文件编码    
+" " %{&ff} 显示文件类型    
+" " \ \代表加入一个空格                                                                                                                                                                                                                                                                                                    
+set statusline=%F%m%r%h%w%=\ %l,%v\ \ \ \ %p%%\ \ \ \ [%L]
 
-"highlight LineNr cterm=bold ctermfg=red
-"highlight StorageClass cterm=bold ctermfg=darkgreen
-"highlight Type cterm=bold ctermfg=blue
-"highlight LineNr cterm=bold ctermbg=black
-"highlight phpStructure cterm=bold ctermfg=darkred
-"highlight phpFunctions cterm=bold ctermfg=256
-"highlight Title ctermfg=blue 
-"highlight pythonString cterm=bold ctermfg=gray
-"highlight pythonFunction cterm=bold 
-"highlight pythonInclude cterm=bold ctermfg=lightblue
-"highlight javaScriptStringS ctermfg=gray 
-"highlight String ctermfg=gray
-"hi Search cterm=NONE ctermfg=darkred ctermbg=yellow cterm=reverse
-" Config for vim73
 "set tag=tags;
 
+
+"===
+"=== 插件设置  -----------------------------------------------------------
+"===
 set rtp+=~/.config/autoload/plug.vim
 
 call plug#begin('~/.config/plugged/')
@@ -93,13 +133,6 @@ call plug#end()
 set background=dark
 let g:_termcolors=256
 colorscheme gruvbox
-
-
-
-
-if v:version >= 703
-set   colorcolumn=+1
-endif
 
 
 
@@ -178,7 +211,7 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 nmap <leader>rn <Plug>(coc-rename)
 
 " provide custom statusline: lightline.vim, vim-airline.
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+"set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 augroup mygroup
     autocmd!
@@ -203,7 +236,7 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " Add (Neo)Vim's native statusline support.
 " NOTE: Please see `:h coc-status` for integrations with external plugins that
 " provide custom statusline: lightline.vim, vim-airline.
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+"set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Mappings for CoCList
 " Show all diagnostics.
@@ -237,50 +270,6 @@ xmap ag <Plug>(coc-git-chunk-outer)
 
 
 
-
-" Config for win32 gvim.
-if has("win32")
-set   guioptions-=T
-set   guioptions-=m
-set   guioptions-=r
-set   guioptions-=l
-set   lines=26
-set   columns=90
-source $VIMRUNTIME/delmenu.vim
-source $VIMRUNTIME/menu.vim
-language messages zh_CN.utf-8
-endif
-
-" AUTO COMMANDS: 
-" auto expand tab to blanks
-autocmd FileType c,cpp set expandtab
-" Restore the last quit position when open file.
-" automaticly return last quit positon 
-autocmd BufReadPost *
-    \ if line("'\"") > 0 && line("'\"") <= line("$") |
-    \     exe "normal g'\"" |
-    \ endif
-set mouse =a "always use mouse"
-" SHORTCUT SETTINGS: 
-" Set mapleader
-let mapleader=","
-" Space to command mode.
-nnoremap <space> :
-vnoremap <space> :
-" Switching between buffers.
-" ??
-nnoremap <C-h> <C-W>h
-nnoremap <C-j> <C-W>j
-nnoremap <C-k> <C-W>k
-nnoremap <C-l> <C-W>l
-inoremap <C-h> <Esc><C-W>h
-inoremap <C-j> <Esc><C-W>j
-inoremap <C-k> <Esc><C-W>k
-inoremap <C-l> <Esc><C-W>l
-" "cd" to change to open directory.
-let OpenDir=system("pwd")
-nmap <silent> <leader>cdr :exe 'cd ' . OpenDir<cr>:pwd<cr>
-nmap <silent> <leader>cdf :cd %:h<cr>:pwd<cr>
 
 
 "===
