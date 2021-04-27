@@ -6,7 +6,7 @@ clang-llvm  12.0.0
 clangd clangd version 9.0.0-2~ubuntu18.04.2 (tags/RELEASE_900/final)  
 
 # 前言  
- 本文件包含所有插件及配置文件，旨在完全离线情况下可以安装（正在完善） 
+ 本文件包含所有插件及配置文件，旨在完全离线情况下可以安装（clang离线安装需要下载release包） 
 
 # Use guide  
 1.将.bashrc和.config文件夹移动到家目录下  
@@ -25,7 +25,7 @@ clangd clangd version 9.0.0-2~ubuntu18.04.2 (tags/RELEASE_900/final)
 	cp ~/.config/lib/nvim-linux64/bin/nvim /usr/bin/   
   
 
-# 关于clangd  
+# 关于clang  
 0.需要下载ubuntu版本：
   https://github.com/llvm/llvm-project/releases  
   本次操作所用版本：clang+llvm-12.0.0-x86_64-linux-gnu-ubuntu-16.04.tar.xz  
