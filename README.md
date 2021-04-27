@@ -26,7 +26,10 @@ clangd clangd version 9.0.0-2~ubuntu18.04.2 (tags/RELEASE_900/final)
   
 
 # 关于clangd  
-1.llvm-version 放在 /usr/bin/ 目录下  
+0.需要下载ubuntu版本：
+  https://github.com/llvm/llvm-project/releases  
+  本次操作所用版本：clang+llvm-12.0.0-x86_64-linux-gnu-ubuntu-16.04.tar.xz  
+1.将目录 llvm-12/ 放在 /usr/bin/ 目录下  
 2.clang相关引用设置:  
   sudo ln -s  /usr/lib/clang+llvm-12.0.0/bin/clang      /usr/bin/clang  
   sudo ln -s  /usr/lib/clang+llvm-12.0.0/bin/clang++    /usr/bin/clang++  
