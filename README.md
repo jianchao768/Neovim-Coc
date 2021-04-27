@@ -1,22 +1,23 @@
-# Preface  
-These are all the files for the NEOVIM-coc configuration and are designed to be configured without having to install extra files  
+# 版本：  
+NVIM v0.5.0-dev+1256-gd19348923
 
-Of course, it is being refined so that it can be installed offline  
+# 前言  
+ 本文件包含所有插件及配置文件，旨在完全离线情况下可以安装（正在完善）
 
 # Use guide  
-1. Move the.bashrc and.config folders to your home directory  
+1.将.bashrc和.config文件夹移动到家目录下  
 
-2. Change the path of nodjs and nvim bin folders in.bashrc  
+2.更改 nodjs and nvim bin 文件夹在.bashrc中的路径
 
-3. Configuration nodejs  
-	sudo ln -s ~/.config/lib/node-v14.16.1-linux-x64/bin/node /usr/local/bin/node  
+3.配置 nodejs  
+  sudo ln -s ~/.config/lib/node-v14.16.1-linux-x64/bin/node /usr/local/bin/node  
   sudo ln -s ~/.config/lib/node-v14.16.1-linux-x64/bin/npm /usr/local/bin/npm  
 
-4. Install clangd  
-	sudo apt-get install clangd-9  
-	sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-9 100  
+4. 安装 clangd  
+  sudo apt-get install clangd-9  
+  sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-9 100  
 
-5. Copy the NVIM executable  
+5. 拷贝nvim可执行文件  
 	cp ~/.config/lib/nvim-linux64/bin/nvim /usr/bin/ 
   
   
