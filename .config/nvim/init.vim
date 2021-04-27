@@ -126,6 +126,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'majutsushi/tagbar'
 Plug 'honza/vim-snippets'                "C++ 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}  
+Plug 'dimasg/vim-mark'
 call plug#end()
 
 
