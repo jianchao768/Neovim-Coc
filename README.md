@@ -1,26 +1,46 @@
 # 版本：  
-NVIM v0.5.0-dev+1256-gd19348923
+NVIM  v0.5.0-dev+1256-gd19348923  
+node  v14.16.1  
+npm   6.14.12   
+clang-llvm  12.0.0  
+clangd clangd version 9.0.0-2~ubuntu18.04.2 (tags/RELEASE_900/final)  
 
 # 前言  
- 本文件包含所有插件及配置文件，旨在完全离线情况下可以安装（正在完善）
+ 本文件包含所有插件及配置文件，旨在完全离线情况下可以安装（正在完善） 
 
 # Use guide  
 1.将.bashrc和.config文件夹移动到家目录下  
 
-2.更改 nodjs and nvim bin 文件夹在.bashrc中的路径
+2.更改 nodjs and nvim bin 文件夹在.bashrc中的路径  
 
 3.配置 nodejs  
   sudo ln -s ~/.config/lib/node-v14.16.1-linux-x64/bin/node /usr/local/bin/node  
-  sudo ln -s ~/.config/lib/node-v14.16.1-linux-x64/bin/npm /usr/local/bin/npm  
+  sudo ln -s ~/.config/lib/node-v14.16.1-linux-x64/bin/npm /usr/local/bin/npm   
 
-4. 安装 clangd  
+4.安装 clangd  
   sudo apt-get install clangd-9  
-  sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-9 100  
+  sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-9 100    
 
-5. 拷贝nvim可执行文件  
-	cp ~/.config/lib/nvim-linux64/bin/nvim /usr/bin/ 
+5.拷贝nvim可执行文件  
+	cp ~/.config/lib/nvim-linux64/bin/nvim /usr/bin/   
   
-  
+
+# 关于clangd  
+1.llvm-version 放在 /usr/bin/ 目录下  
+2.clang相关引用设置:  
+  sudo ln -s  /usr/lib/clang+llvm-12.0.0/bin/clang      /usr/bin/clang  
+  sudo ln -s  /usr/lib/clang+llvm-12.0.0/bin/clang++    /usr/bin/clang++  
+  sudo ln -s  /usr/lib/clang+llvm-12.0.0/bin/clang-12   /usr/bin/clang  
+  sudo ln -s  /usr/lib/clang+llvm-12.0.0/bin/clang-cpp  /usr/bin/clang-cpp   
+
+参考：  
+  clang -> ../lib/llvm-6.0/bin/clang*                                                                                                                                                                           
+  clang++ -> ../lib/llvm-6.0/bin/clang++*                                                                                                                                                                     
+  clang-6.0 -> ../lib/llvm-6.0/bin/clang*                                                                                                                                                                     
+  clang++-6.0 -> ../lib/llvm-6.0/bin/clang++*                                                                                                                                                                 
+  clang-cpp-6.0 -> ../lib/llvm-6.0/bin/clang-cpp*                                                                                                                                                             
+  clangd -> /etc/alternatives/clangd*                                                                                                                                                                         
+  clangd-9 -> ../lib/llvm-9/bin/clangd*  
   
   
 # Q&A  
