@@ -3,7 +3,6 @@ NVIM  v0.5.0-dev+1256-gd19348923
 node  v14.16.1  
 npm   6.14.12   
 clang-llvm  12.0.0  
-clangd clangd version 9.0.0-2~ubuntu18.04.2 (tags/RELEASE_900/final)  
 
 # 前言  
  本文件包含所有插件及配置文件，旨在完全离线情况下可以安装（clang离线安装需要下载release包） 
@@ -25,7 +24,7 @@ clangd clangd version 9.0.0-2~ubuntu18.04.2 (tags/RELEASE_900/final)
 	cp ~/.config/lib/nvim-linux64/bin/nvim /usr/bin/   
   
 
-# 关于clang  
+# 关于clang:安装包安装
 0.需要下载ubuntu版本：
   https://github.com/llvm/llvm-project/releases  
   本次操作所用版本：clang+llvm-12.0.0-x86_64-linux-gnu-ubuntu-16.04.tar.xz  
@@ -35,6 +34,7 @@ clangd clangd version 9.0.0-2~ubuntu18.04.2 (tags/RELEASE_900/final)
   sudo ln -s  /usr/lib/clang+llvm-12.0.0/bin/clang++    /usr/bin/clang++  
   sudo ln -s  /usr/lib/clang+llvm-12.0.0/bin/clang-12   /usr/bin/clang  
   sudo ln -s  /usr/lib/clang+llvm-12.0.0/bin/clang-cpp  /usr/bin/clang-cpp   
+  sudo ln -s  /usr/lib/clang+llvm-12.0.0/bin/clangd     /usr/bin/clangd
 
 参考：  
   clang -> ../lib/llvm-6.0/bin/clang*                                                                                                                                                                           
@@ -67,4 +67,5 @@ Error: EACCES: permission denied, open '/work/home/.config/coc/mru'
     at Object.writeFileSync (fs.js:1467:35)  
     at a0.add (/work/home/.config/plugged/coc.nvim/build/index.js:183:124)  
     at processTicksAndRejections (internal/process/task_queues.js:93:5)  
+
 给mru这个文件 chmod 666    
