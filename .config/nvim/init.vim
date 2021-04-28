@@ -1,8 +1,6 @@
-"set tags=/home/ts/workspace/code/sm7250/vendor/qcom/proprietary/tags 
-"set tags=/home/ts/workspace/code/sm7250/tags
-"set tags=/home/ts/workspace/code/oneplus/android/vendor/qcom/proprietary/tags  "oneplus"
-set tags=/home/ts/workspace/code/sm8350/android/vendor/qcom/proprietary/tags 
-
+""                          "" 
+""    start neovim config   ""   
+""                          ""
 
 " SHORTCUT SETTINGS: 
 " Set mapleader
@@ -37,8 +35,9 @@ autocmd BufReadPost *
     \ endif
 
 
-
-" GENERAL SETTINGS: 
+"
+" GENERAL SETTINGS:  --------------------------------------------------
+"
 set nocompatible
 filetype plugin indent on
 syntax on
@@ -107,7 +106,8 @@ set colorcolumn=+1
 " " \ \代表加入一个空格                                                                                                                                                                                                                                                                                                    
 set statusline=%F%m%r%h%w%=\ %l,%v\ \ \ \ %p%%\ \ \ \ [%L]
 
-"set tag=tags;
+set autochdir 
+set tag=tags;
 
 
 "===
@@ -371,7 +371,7 @@ nmap <leader>gs :GetScripts<cr>
 
 "cscope使用方法：
 "1、需要用绝对路径，否则会找不到文件
-"生成索引文件列表  find /home/ts/workspace/code/sm7250/ -name "*.c" -o -name "*.h" -o -name "*.cpp" > cscope.files  
+"生成索引文件列表  find /home/path/ -name "*.c" -o -name "*.h" -o -name "*.cpp" > cscope.files  
 "生成索引文件 cscope -bkq -f ~/project/cscope.out -i cscope.files   
 "2、在.bashrc中加入绝对路径
 "		CSCOPE_DB=/project/cscope.out
@@ -396,6 +396,11 @@ let g:gitgutter_sign_modified_removed='~'
 
 
 
+
+
+"===
+"=== 杂项 -----------------------------------------------------------
+"===
 " OmniCppComplete.vim
 let g:OmniCpp_DefaultNamespaces=["std"]
 let g:OmniCpp_MayCompleteScope=1
@@ -419,12 +424,6 @@ let g:LookupFile_AllowNewFiles=0
 " Man.vim
 source $VIMRUNTIME/ftplugin/man.vim
 
-" snipMate
-let g:snips_author="Ning Wei,wuyh"
-let g:snips_email="Ningwei@163.com,wuyh0623@thundersoft"
-let g:snips_copyright="SicMicro, Inc"
-
-let g:indentLine_char='|'
 
 
 "===
