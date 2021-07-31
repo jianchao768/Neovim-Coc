@@ -137,7 +137,7 @@ fi
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
-source ~/.vim/bin/source.rc
+#source ~/.vim/bin/source.rc
 
 function set-title() {
 if [[ -z "$ORIG" ]]; then
