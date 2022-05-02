@@ -8,21 +8,12 @@ clang-llvm  12.0.0
  本文件包含所有插件及配置文件，旨在完全离线情况下可以安装（clang离线安装需要下载release包） 
 
 # Use guide  
-1.将.bashrc和.config文件夹移动到家目录下  
+1.将.bashrc .config .fzf文件夹移动到家目录下  
 
-2.更改 nodjs and nvim bin 文件夹在.bashrc中的路径  
-
-3.配置 nodejs  
-  sudo ln -s ~/.config/lib/node-v14.16.1-linux-x64/bin/node /usr/local/bin/node  
-  sudo ln -s ~/.config/lib/node-v14.16.1-linux-x64/bin/npm /usr/local/bin/npm   
-
-4.安装 clangd  
+2.安装 clangd  
   sudo apt-get install clangd-9  
   sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-9 100    
 
-5.拷贝nvim可执行文件  
-	cp ~/.config/lib/nvim-linux64/bin/nvim /usr/bin/   
-  
 
 # 关于clang:安装包安装
 0.需要下载ubuntu版本：

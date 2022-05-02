@@ -83,9 +83,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
 
 # jump path
 export MARKPATH=$HOME/.marks
@@ -158,13 +155,34 @@ export ARCH=arm64
 export CROSS_COMPILE=/usr/local/arm/aarch64-toolchain/gcc-linaro-aarch64-linux-gnu-4.8-2014.01_linux/bin/aarch64-linux-gnu-
 #export CROSS_COMPILE=/usr/bin/aarch64-linux-gnu-
 
-
+#nvim ----------
 export PATH=~/.config/lib/nvim-linux64/lib/:${PATH}
+export PATH=~/.config/lib/nvim-linux64/bin/:${PATH}
 export PATH=~/.config/lib/node-v14.16.1-linux-x64/lib/:${PATH}
+export PATH=~/.config/lib/node-v14.16.1-linux-x64/bin/:${PATH}
 
-#autojump 
+#autojump ----------- 
 [[ -s /home/ts/.autojump/etc/profile.d/autojump.sh ]] && source /home/ts/.autojump/etc/profile.d/autojump.sh
 
+#cscope ------------
 #cscope env
 #CSCOPE=/path/cscope.out
 #export CSCOPE
+
+#fzf -----------
+export PATH=~/.fzf/bin/:${PATH}
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+#ripgrep ----------
+export PATH=~/.config/lib/ripgrep-13/:${PATH}
+
+#key-bind
+alias ll='ls -alF'
+alias la='ls -A'
+alias ..='cd ../../'
+alias ...='cd ../../../'
+alias ....='cd ../../../../'
+alias gd='git diff'
+alias gs='git status'
+alias gb='git branch'

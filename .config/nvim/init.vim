@@ -115,7 +115,7 @@ set tag=tags;
 "===
 set rtp+=~/.config/autoload/plug.vim
 
-call plug#begin('~/.config/plugged/')
+call plug#begin('~/.config/nvim/plugged/')
 Plug 'jiangmiao/auto-pairs'              "自动括号补齐
 Plug 'octol/vim-cpp-enhanced-highlight'  "C++高亮补充
 "Plug 'airblade/vim-gitgutter'            "git检测文件改动
@@ -444,7 +444,7 @@ nmap f ^
 "nmap f 0
 nmap . $
 "gd
-nmap e #
+"nmap e #
 nmap ; *
 ":noh
 nmap ' :noh<ENTER>
@@ -527,10 +527,20 @@ function! LoadCscope()
 	endif
 endfunction
 au BufEnter /* call LoadCscope()
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
-xmap <C-l>     <Plug>(neosnippet_start_unite_snippet_target)
+"imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+"smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+"xmap <C-k>     <Plug>(neosnippet_expand_target)
+"xmap <C-l>     <Plug>(neosnippet_start_unite_snippet_target)
+
+imap <C-l> <Plug>(coc-snippets-expand)
+vmap <C-j> <Plug>(coc-snippets-select)
+
+let g:coc_snippet_next = '<c-j>'
+let g:coc_snippet_prev = '<c-k>'
+
+imap <C-j> <Plug>(coc-snippets-expand-jump)
+xmap <leader>x  <Plug>(coc-convert-snippet)
+
 "for show no user whitespace
 "Bundle 'bronson/vim-trailing-whitespace'
 "map <leader><space> : FixWhitespace<cr>
