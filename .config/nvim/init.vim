@@ -63,7 +63,7 @@ set helplang=cn
 set hidden
 set history=100
 set hlsearch
-"set   ignorecase "忽略大小写,加了这行之后vi -t会卡屏"
+set ignorecase "忽略大小写,加了这行之后vi -t会卡屏"
 set incsearch
 set laststatus=2
 "You can copy context if use v
@@ -105,9 +105,6 @@ set colorcolumn=+1
 " " %{&ff} 显示文件类型    
 " " \ \代表加入一个空格                                                                                                                                                                                                                                                                                                    
 set statusline=%F%m%r%h%w%=\ %l,%v\ \ \ \ %p%%\ \ \ \ [%L]
-
-set autochdir 
-set tag=tags;
 
 
 "===
@@ -302,6 +299,7 @@ nnoremap <F3> :NERDTreeToggle<CR> " 开启/关闭nerdtree快捷键
 "===
 "=== tagbar     -------------------------------------------------------------
 "===
+"autocmd FileType c,cpp set shiftwidth=4 | call tagbar#autoopen()
 nmap <silent> <leader>t :TagbarToggle<CR>
 
 let g:tagbar_width=20
@@ -377,24 +375,12 @@ nmap <leader>gs :GetScripts<cr>
 "		CSCOPE_DB=/project/cscope.out
 "		export CSCOPE_DB
 
-
-
-"===
-"=== gitgutter -----------------------------------------------------------
-"===
-"开启会降低启动速度
-let GitGutterDisable=1
-let GitGutterSignsDisable=1
-let g:gitgutter_max_signs=500
-
-let g:gitgutter_sign_added='+'
-let g:gitgutter_sign_modified='#'
-let g:gitgutter_sign_removed='-'
-let g:gitgutter_sign_removed_first_line='^^'
-let g:gitgutter_sign_removed_above_and_below='{'
-let g:gitgutter_sign_modified_removed='~'
-
-
+" ==== ctags =====
+set autochdir
+set tag=tags;
+"find . -name "*.h" -o -name "*.c" -o -name "*.cpp" >> project.files
+"ctags -L project.fils
+"ctags -R --fields=+niazSK --extra=+qf --c++-kinds=+px --c-kinds=+px
 
 
 
@@ -436,8 +422,8 @@ function! RunShell(Msg, Shell)
 endfunction
 nmap w :w!<ENTER>
 nmap W :w!<ENTER>
-nmap q :q!<ENTER>
-nmap Q :q!<ENTER>
+nmap q :q<ENTER>
+nmap Q :q<ENTER>
 nmap WQ :x<ENTER>
 nmap s %
 nmap f ^
@@ -544,4 +530,44 @@ xmap <leader>x  <Plug>(coc-convert-snippet)
 "for show no user whitespace
 "Bundle 'bronson/vim-trailing-whitespace'
 "map <leader><space> : FixWhitespace<cr>
+
+
+
+"===
+"=== vim-fzf  -----------------------------------------------------------
+"===
+"noremap <leader>f :FZF<ENTER>
+set rtp+=~/.fzf/
+
+"let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6  }  } let g:fzf_layout = { 'down': '30%'  }
+"autocmd! FileType fzf
+"autocmd  FileType fzf set laststatus=0 noshowmode noruler
+"  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+
+" Terminal colors for seoul256 color scheme
+if has('nvim')
+ let g:terminal_color_0 = '#4e4e4e'
+ let g:terminal_color_1 = '#d68787'
+ let g:terminal_color_2 = '#5f865f'
+ let g:terminal_color_3 = '#d8af5f'
+ let g:terminal_color_4 = '#85add4'
+ let g:terminal_color_5 = '#d7afaf'
+ let g:terminal_color_6 = '#87afaf'
+ let g:terminal_color_7 = '#d0d0d0'
+ let g:terminal_color_8 = '#626262'
+ let g:terminal_color_9 = '#d75f87'
+ let g:terminal_color_10 = '#87af87'
+ let g:terminal_color_11 = '#ffd787'
+ let g:terminal_color_12 = '#add4fb'
+ let g:terminal_color_13 = '#ffafaf'
+ let g:terminal_color_14 = '#87d7d7'
+ let g:terminal_color_15 = '#e4e4e4'
+else
+ let g:terminal_ansi_colors = [
+    \ '#4e4e4e', '#d68787', '#5f865f', '#d8af5f',
+    \ '#85add4', '#d7afaf', '#87afaf', '#d0d0d0',
+    \ '#626262', '#d75f87', '#87af87', '#ffd787',
+    \ '#add4fb', '#ffafaf', '#87d7d7', '#e4e4e4'
+    \ ]
+endif
 
