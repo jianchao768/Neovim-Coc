@@ -7,25 +7,24 @@ clang-llvm  12.0.0
 # 前言  
  本文件包含所有插件及配置文件，旨在完全离线情况下可以安装（clang离线安装需要下载release包） 
 
-# Use guide  
+# 使用方法   
 1.将.bashrc .config .fzf文件夹移动到家目录下  
-
-2.联网安装 clangd  
+ 
+2.安装 clangd  
+1) 联网:    
   sudo apt-get install clangd-9  
   sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-9 100    
-
-
-# 关于clang:安装包安装
-0.需要下载ubuntu版本：
+  
+2）离线:  
+a.需要下载ubuntu版本： 
   https://github.com/llvm/llvm-project/releases  
   本次操作所用版本：clang+llvm-12.0.0-x86_64-linux-gnu-ubuntu-16.04.tar.xz  
   需要找到对应架构的文件，不然会出错，x86 aarch等  
- 
-1.解压在~/Downloads/ 下  
-2.在~/.bashrc 添加环境变量  
+  
+b.解压在~/Downloads/ 下  
+c.在~/.bashrc 添加环境变量  
 export PATH=~/Downloads/clang+llvm-12.0.0-x86_64-linux-gnu-ubuntu-16.04/bin/:${PATH}   
 
-  
   
 # Q&A  
 ## the first:  
