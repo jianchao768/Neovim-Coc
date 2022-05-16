@@ -10,7 +10,7 @@ clang-llvm  12.0.0
 # Use guide  
 1.将.bashrc .config .fzf文件夹移动到家目录下  
 
-2.安装 clangd  
+2.联网安装 clangd  
   sudo apt-get install clangd-9  
   sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-9 100    
 
@@ -19,22 +19,12 @@ clang-llvm  12.0.0
 0.需要下载ubuntu版本：
   https://github.com/llvm/llvm-project/releases  
   本次操作所用版本：clang+llvm-12.0.0-x86_64-linux-gnu-ubuntu-16.04.tar.xz  
-1.将目录 llvm-12/ 放在 /usr/bin/ 目录下  
-2.clang相关引用设置:  
-  sudo ln -s  /usr/lib/clang+llvm-12.0.0/bin/clang      /usr/bin/clang  
-  sudo ln -s  /usr/lib/clang+llvm-12.0.0/bin/clang++    /usr/bin/clang++  
-  sudo ln -s  /usr/lib/clang+llvm-12.0.0/bin/clang-12   /usr/bin/clang  
-  sudo ln -s  /usr/lib/clang+llvm-12.0.0/bin/clang-cpp  /usr/bin/clang-cpp   
-  sudo ln -s  /usr/lib/clang+llvm-12.0.0/bin/clangd     /usr/bin/clangd
+  需要找到对应架构的文件，不然会出错，x86 aarch等  
+ 
+1.解压在~/Downloads/ 下  
+2.在~/.bashrc 添加环境变量  
+export PATH=~/Downloads/clang+llvm-12.0.0-x86_64-linux-gnu-ubuntu-16.04/bin/:${PATH}   
 
-参考：  
-  clang -> ../lib/llvm-6.0/bin/clang*                                                                                                                                                                           
-  clang++ -> ../lib/llvm-6.0/bin/clang++*                                                                                                                                                                     
-  clang-6.0 -> ../lib/llvm-6.0/bin/clang*                                                                                                                                                                     
-  clang++-6.0 -> ../lib/llvm-6.0/bin/clang++*                                                                                                                                                                 
-  clang-cpp-6.0 -> ../lib/llvm-6.0/bin/clang-cpp*                                                                                                                                                             
-  clangd -> /etc/alternatives/clangd*                                                                                                                                                                         
-  clangd-9 -> ../lib/llvm-9/bin/clangd*  
   
   
 # Q&A  
