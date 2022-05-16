@@ -8,7 +8,7 @@ clang-llvm  12.0.0
  本文件包含所有插件及配置文件，旨在完全离线情况下可以安装（clang离线安装需要下载release包） 
 
 # 使用方法   
-1.将.bashrc .config .fzf文件夹移动到家目录下  
+1.将.bashrc .config .fzf等文件夹移动到家目录下  
  
 2.安装 clangd  
 1)联网:  
