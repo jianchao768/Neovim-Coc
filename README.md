@@ -11,11 +11,11 @@ clang-llvm  12.0.0
 1.将.bashrc .config .fzf文件夹移动到家目录下  
  
 2.安装 clangd  
-1) 联网:    
+1)联网:  
   sudo apt-get install clangd-9  
   sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-9 100    
   
-2）离线:  
+2)离线:  
 a.需要下载ubuntu版本： 
   https://github.com/llvm/llvm-project/releases  
   本次操作所用版本：clang+llvm-12.0.0-x86_64-linux-gnu-ubuntu-16.04.tar.xz  
