@@ -1,13 +1,13 @@
-# 版本：  
+## 版本：  
 NVIM  v0.10.0-dev-2755+ge1ff2c51c   
 node  node-v20.12.0-linux-x64   
 npm   10.5.0   
 clang-llvm clang+llvm-17.0.6-x86_64-linux-gnu-ubuntu-22.04    
 
-# 前言  
+## 前言  
   本文件包含所有插件及配置文件，旨在完全离线情况下可以安装（clang离线安装需要下载release包）  
  
-# 使用方法   
+## 使用方法   
 1.将.bashrc .config .fzf等文件夹移动到家目录下  
  
 2.安装 clangd  
@@ -26,7 +26,7 @@ c.在~/.bashrc 添加环境变量
 export PATH=~/Downloads/clang+llvm-17.0.6-x86_64-linux-gnu-ubuntu-22.04/bin/:${PATH}   
 
 
-lastupdated: 2024/3/31   
+### lastupdated: 2024/3/31   
 
 
 
