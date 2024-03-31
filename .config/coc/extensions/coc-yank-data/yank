@@ -1,105 +1,382 @@
-14f4a3e4a9300d3c33f9dea6835e399d|file:///home/li/.config/nvim/init.vim|111|1|V|vim
-	            \ 'coc-json',
-8c986d31dae062397dc26c0c78406ae5|file:///home/li/.config/nvim/init.vim|113|1|V|vim
-	            \ 'coc-emmet',
-29c306d8dc62567199ef6c7a7ba83968|file:///home/li/.config/nvim/init.vim|313|1|V|vim
-	nmap <silent> <leader>t :TagbarToggle<CR>
-b0d70feb6b8d89e9a2b41a47584ec5ef|file:///home/li/.config/nvim/init.vim|289|13|V|vim
-	nmap <silent> <leader>v :TagbarToggle<CR>
-63973cd3ad7ccf2c8d5dce94b215f683|file:///home/li/workspace/2.cpp|5|12|v|cpp
-	expression
-7347a4bd3e36a38ffa95a178a3f85393|file:///home/li/workspace/2.cpp|13|14|v|cpp
-	int i
-ecdc40ea319a7fd3a8a38227f2e089c0|file:///home/li/.config/nvim/coc-settings.json|26|1|v|json
-	    "suggest.completionItemKindLabels": {
-	        "keyword": "\uf1de",
-	        "variable": "\ue79b",
-	        "value": "\uf89f",
-	        "operator": "\u03a8",
-	        "function": "\u0192",
-	        "reference": "\ufa46",
-	        "constant": "\uf8fe",
-	        "method": "\uf09a",
-	        "struct": "\ufb44",
-	        "class": "\uf0e8",
-	        "interface": "\uf417",
-	        "text": "\ue612",
-	        "enum": "\uf435",
-	        "enumMember": "\uf02b",
-	        "module": "\uf40d",
-	        "color": "\ue22b",
-	        "property": "\ue624",
-	        "field": "\uf9be",
-	        "unit": "\uf475",
-	        "event": "\ufacd",
-	        "file": "\uf723",
-	        "folder": "\uf114",
-	        "snippet": "\ue60b",
-	        "typeParameter": "\uf728",
-	        "default": "\uf29c"
-	    },
+5669c30132b57d6d2efe8f34f140a2f9|file:///home/ljc/Downloads/Neovim-Coc/.config/nvim/init.vim|483|1|V|vim
+	"===
+	"=== Auto-Pairs ---------------------------------------------------
+	"===
+	let g:AutoPairShortcutToggle = '<leader>a'
+	"let g:AutoPairShortcutFastWrap
+	"let g:AutoPairShortcutJump
+	"let g:AutoPairShortcutBackInsert
 	
-889888b787174599bbe43e704ddaf2f6|file:///home/li/.config/nvim/coc-settings.json|25|1|V|json
-	    "suggest.defaultSortMethod": "alphabetical",
-	    "diagnostic.warningSign": "!!",
-db926c97043fe2baf0784facffbdcd24|file:///home/li/.config/nvim/coc-settings.json|26|3|v|json
-	  "suggest.completionItemKindLabels": {
-	        "keyword": "\uf1de",
-	        "variable": "\ue79b",
-	        "value": "\uf89f",
-	        "operator": "\u03a8",
-	        "function": "\u0192",
-	        "reference": "\ufa46",
-	        "constant": "\uf8fe",
-	        "method": "\uf09a",
-	        "struct": "\ufb44",
-	        "class": "\uf0e8",
-	        "interface": "\uf417",
-	        "text": "\ue612",
-	        "enum": "\uf435",
-	        "enumMember": "\uf02b",
-	        "module": "\uf40d",
-	        "color": "\ue22b",
-	        "property": "\ue624",
-	        "field": "\uf9be",
-	        "unit": "\uf475",
-	        "event": "\ufacd",
-	        "file": "\uf723",
-	        "folder": "\uf114",
-	        "snippet": "\ue60b",
-	        "typeParameter": "\uf728",
-	        "default": "\uf29c"
-	    },
+	let g:winManagerWindowLayout='FileExplorer|BufExplorer' 
+	let g:persistentBehaviour=0         
+	let g:winManagerWidth=20
+	let g:defaultExplorer=1
+	nmap <silent> <leader>fir :FirstExplorerWindow<cr>
+	nmap <silent> <leader>bot :BottomExplorerWindow<cr>
+	nmap <silent> <leader>wm :WMToggle<cr>
+	"use Ctrl+c to copy context
+	"vmap <C-c> "+y
 	
-fea6772c0735b17a3237b6235f2162b1|file:///home/li/.config/nvim/coc-settings.json|26|1|V|json
-	    "suggest.completionItemKindLabels": {
-	        "keyword": "\uf1de",
-	        "variable": "\ue79b",
-	        "value": "\uf89f",
-	        "operator": "\u03a8",
-	        "function": "\u0192",
-	        "reference": "\ufa46",
-	        "constant": "\uf8fe",
-	        "method": "\uf09a",
-	        "struct": "\ufb44",
-	        "class": "\uf0e8",
-	        "interface": "\uf417",
-	        "text": "\ue612",
-	        "enum": "\uf435",
-	        "enumMember": "\uf02b",
-	        "module": "\uf40d",
-	        "color": "\ue22b",
-	        "property": "\ue624",
-	        "field": "\uf9be",
-	        "unit": "\uf475",
-	        "event": "\ufacd",
-	        "file": "\uf723",
-	        "folder": "\uf114",
-	        "snippet": "\ue60b",
-	        "typeParameter": "\uf728",
-	        "default": "\uf29c"
-	    },
-47f7c9c5e15a099775d9f922e5b8db0c|file:///home/li/.config/nvim/coc-settings.json|35|14|V|json
-	    "git.virtualTextPrefix":"⏰ ",
-aed419737b44693a401188416809bb09|file:///home/li/.config/nvim/coc-settings.json|35|14|V|json
-	    "git.addGBlameToVirtualText": true
+	"modify ctags' shortcuts 
+	"noremap ]  <C-]>
+	"noremap t  <C-t>
+	
+	"This tip provides the same autoloading functionality for Cscope
+	function! LoadCscope()
+		let db = findfile("cscope.out", ".;")
+		if (!empty(db))
+			let path = strpart(db, 0, match(db, "/cscope.out$"))
+			set nocscopeverbose " suppress 'duplicate connection' error
+			exe "cs add " . db . " " . path
+			set cscopeverbose
+		endif
+	endfunction
+	au BufEnter /* call LoadCscope()
+	"imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+	"smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+	"xmap <C-k>     <Plug>(neosnippet_expand_target)
+	"xmap <C-l>     <Plug>(neosnippet_start_unite_snippet_target)
+	
+	imap <C-l> <Plug>(coc-snippets-expand)
+	vmap <C-j> <Plug>(coc-snippets-select)
+	
+	let g:coc_snippet_next = '<c-j>'
+	let g:coc_snippet_prev = '<c-k>'
+	
+	imap <C-j> <Plug>(coc-snippets-expand-jump)
+	xmap <leader>x  <Plug>(coc-convert-snippet)
+	
+	"for show no user whitespace
+	"Bundle 'bronson/vim-trailing-whitespace'
+	"map <leader><space> : FixWhitespace<cr>
+	
+	
+	
+	"===
+	"=== vim-fzf  -----------------------------------------------------------
+	"===
+	"noremap <leader>f :FZF<ENTER>
+	set rtp+=~/.fzf/
+	
+	"let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6  }  } let g:fzf_layout = { 'down': '30%'  }
+	"autocmd! FileType fzf
+	"autocmd  FileType fzf set laststatus=0 noshowmode noruler
+	"  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+	
+	" Terminal colors for seoul256 color scheme
+	if has('nvim')
+	 let g:terminal_color_0 = '#4e4e4e'
+	 let g:terminal_color_1 = '#d68787'
+	 let g:terminal_color_2 = '#5f865f'
+	 let g:terminal_color_3 = '#d8af5f'
+	 let g:terminal_color_4 = '#85add4'
+	 let g:terminal_color_5 = '#d7afaf'
+	 let g:terminal_color_6 = '#87afaf'
+	 let g:terminal_color_7 = '#d0d0d0'
+	 let g:terminal_color_8 = '#626262'
+	 let g:terminal_color_9 = '#d75f87'
+	 let g:terminal_color_10 = '#87af87'
+	 let g:terminal_color_11 = '#ffd787'
+	 let g:terminal_color_12 = '#add4fb'
+	 let g:terminal_color_13 = '#ffafaf'
+	 let g:terminal_color_14 = '#87d7d7'
+	 let g:terminal_color_15 = '#e4e4e4'
+	else
+	 let g:terminal_ansi_colors = [
+	    \ '#4e4e4e', '#d68787', '#5f865f', '#d8af5f',
+	    \ '#85add4', '#d7afaf', '#87afaf', '#d0d0d0',
+	    \ '#626262', '#d75f87', '#87af87', '#ffd787',
+	    \ '#add4fb', '#ffafaf', '#87d7d7', '#e4e4e4'
+	    \ ]
+	endif
+	
+46042b1d2950fc2f2c4151d34a307389|file:///home/ljc/Downloads/Neovim-Coc/.config/nvim/init.vim|328|1|V|vim
+	"===
+	"=== cscope.vim -------------------------------------------------------------
+	"===
+	if has("cscope")
+	    set csto=1
+	    set cst
+	    set nocsverb
+	    if filereadable("cscope.out")
+	        cs add cscope.out
+	    endif
+	    set csverb
+	endif
+	
+	"=== cscope快捷键设置 -------
+	
+	nmap  <F6> :vimgrep /<C-R>=expand("<cword>")<cr>/ **/*.c **/*.h<cr><C-o>:cw<cr>
+	nmap  <F9> :call RunShell("Generate tags", "ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .")<cr>
+	nmap <F10> :call HLUDSync()<cr>
+	nmap <F11> :call RunShell("Generate filename tags", "~/.vim/shell/genfiletags.sh")<cr>
+	nmap <F12> :call RunShell("Generate cscope", "cscope -Rb")<cr>:cs add cscope.out<cr>
+	nmap <leader>sa :cs add cscope.out<cr>
+	
+		"查找指定标识符的使用位置
+	nmap <leader>ss :cs find s <C-R>=expand("<cword>")<cr><cr>
+		"查找指定标识符定义的位置
+	nmap <leader>sg :cs find g <C-R>=expand("<cword>")<cr><cr>
+	"查找那些函数调用了此函数
+	nmap <leader>sc :cs find c <C-R>=expand("<cword>")<cr><cr>
+		"查找指定的文本字符串，较慢
+	nmap <leader>st :cs find t <C-R>=expand("<cword>")<cr><cr>
+		"查找指定的正则表达式，此时不宜用键盘映射
+	nmap <leader>se :cs find e <C-R>=expand("<cword>")<cr><cr>
+	"查找指定的文件
+	nmap <leader>sf :cs find f <C-R>=expand("<cfile>")<cr><cr>
+	"查找指定文件被那些文件包含
+	nmap <leader>si :cs find i <C-R>=expand("<cfile>")<cr><cr>
+	"查找此函数调用了哪些函数
+	nmap <leader>sd :cs find d <C-R>=expand("<cword>")<cr><cr>
+	
+	nmap <leader>zz <C-w>o
+	nmap <leader>gs :GetScripts<cr>
+	
+	"cscope使用方法：
+	"1、需要用绝对路径，否则会找不到文件
+	"生成索引文件列表  find /home/path/ -name "*.c" -o -name "*.h" -o -name "*.cpp" > cscope.files  
+	"生成索引文件 cscope -bkq -f ~/project/cscope.out -i cscope.files   
+	"2、在.bashrc中加入绝对路径
+	"		CSCOPE_DB=/project/cscope.out
+	"		export CSCOPE_DB
+	
+	" ==== ctags =====
+	set autochdir
+	set tag=tags;
+	"find . -name "*.h" -o -name "*.c" -o -name "*.cpp" >> project.files
+	"ctags -L project.fils
+	"ctags -R --fields=+niazSK --extra=+qf --c++-kinds=+px --c-kinds=+px
+46f86faa6bbf9ac94a7e459509a20ed0|file:///home/ljc/.config/nvim/init.vim|496|56|v|vim
+	project
+f9915bd44669d725a2a2f0bb079b9755|file:///home/ljc/.config/nvim/init.vim|497|10|v|vim
+	fils
+e41e86aa0597b97c766b39e37aedfb10|file:///home/ljc/Downloads/Neovim-Coc/.config/nvim/init.vim|387|1|V|vim
+	"===
+	"=== 杂项 -----------------------------------------------------------
+	"===
+3610689b1eb29fc0cf68b149110139b7|file:///home/ljc/Downloads/Neovim-Coc/.config/nvim/init.vim|410|1|V|vim
+	" Man.vim
+	source $VIMRUNTIME/ftplugin/man.vim
+cecb987f43d60d14903a22a7aa895b8e|file:///home/ljc/Downloads/Neovim-Coc/.config/nvim/init.vim|411|1|V|vim
+	source $VIMRUNTIME/ftplugin/man.vim
+90fbde6cb6708bfb35851e4eec90b712|file:///home/ljc/.config/nvim/init.vim|521|1|V|vim
+	kkkkkkkkk
+367a4e2b72c19ff729ec11197618a3d6|file:///home/ljc/Downloads/Neovim-Coc/.config/nvim/init.vim|415|1|V|vim
+	"===
+	"=== plugin shortcuts 快捷键 -------------------------------------------------
+	"===
+	function! RunShell(Msg, Shell)
+		echo a:Msg . '...'
+		call system(a:Shell)
+		echon 'done'
+	endfunction
+	nmap w :w!<ENTER>
+	nmap W :w!<ENTER>
+	nmap q :q<ENTER>
+	nmap Q :q<ENTER>
+	nmap WQ :x<ENTER>
+	nmap s %
+	nmap f ^
+	"nmap f 0
+	nmap . $
+	"gd
+	"nmap e #
+	nmap ; *
+	":noh
+	nmap ' :noh<ENTER>
+	noremap  <leader>= :set mouse =<ENTER>
+	"noremap  <leader>n :set mouse =n<ENTER>
+	noremap <leader>o :vs
+f6db7b0374efc3487a3167264a59ca2c|file:///home/ljc/.config/nvim/init.vim|38|3|v|vim
+	GENERAL SETTINGS:
+9c1e1d871461bf65ec0c8fbbd107e62f|file:///home/ljc/.config/nvim/init.vim|38|2|v|vim
+	 GENERAL SETTINGS:  
+8a0432718064b3113eea745d1ad40ca4|file:///home/ljc/.config/nvim/init.vim|330|6|^v|vim
+	i
+	i
+	a
+	a
+2275994fad549ed37c6e2acea3a2e50b|file:///home/ljc/.config/nvim/init.vim|221|27|V|vim
+	            \ 'coc-actions',
+ebb67a4271abe715344471b0f16321f6|file:///home/ljc/.config/nvim/init.vim|222|20|v|vim
+	actions
+a5c96d33c8ff212898271c57eeb8da64|file:///home/ljc/test1/tests/test.py|1|1|V|python
+	impomr
+bfb06a3a4a8a9d6c9c8ec39d38affbc5|file:///home/ljc/Downloads/Neovim-Coc/.bashrc|180|1|V|sh
+	#key-bind
+	alias ll='ls -alF'
+	alias la='ls -A'
+	alias ..='cd ../'
+	alias ...='cd ../../'
+	alias ....='cd ../../../'
+	alias .....='cd ../../../../'
+	alias gd='git diff'
+	alias gs='git status'
+	alias gb='git branch'
+	alias gl='git log'
+	alias gb='git log --oneline'
+85bdedcdf74ea48247f1ee547baf5e14|file:///home/ljc/.bashrc|134|1|V|sh
+	alias gb='git branch'
+	alias gl='git log'
+	alias gs='git status'
+1857e99c02dffa67199c5362aff33970|file:///home/ljc/.bashrc|140|1|v|sh
+	export PATH=
+28c891a5cc3c222ca6cbca5e29803f78|file:///home/ljc/.bashrc|145|37|v|sh
+	clang+llvm-18.1.2-aarch64-linux-gnu
+aeedb8fddf3af93e4fae02ce2b939c44|file:///home/ljc/test1/tests/test.c|12|1|V|c
+	    printf("")
+55134cbba3f36522b83c5fb22a31e876|file:///home/ljc/test1/tests/test.c|12|1|V|c
+	        cout << c
+7bb0edd98f22430a03b67f853e83c2ca|file:///home/ljc/test1/tests/test.cpp|9|1|V|cpp
+	        
+69cbc2c85072897013eba1ef7526e7ff|file:///home/ljc/test1/tests/test.cpp|16|13|V|cpp
+	    return n;
+0cf31b2c283ce3431794586df7b0996d|file:///home/ljc/test1/tests/test.cpp|17|1|V|cpp
+	    
+c34ff1592ff2d8eee145030d50f3afbb|file:///home/ljc/test1/tests/test.cpp|4|10|v|cpp
+	int argc, char** argv
+3beb9c99d468755e7d51da159b025efd|file:///home/ljc/test1/tests/test.cpp|2|1|V|cpp
+	//using namespace std;
+b6f6ef9d7e45fd89e290a1cf171df714|file:///home/ljc/test1/tests/test.cpp|4|1|V|cpp
+	    int n;
+	
+	    //cout << "xxx:";
+	    //cin >> n;
+	
+	    //if(n%2 == 0)
+	    //    cout << n << "2";
+	    //else
+	    //    cout << n << "1";
+	
+4f45b3bff8802958130d3d0c9160abaa|file:///home/ljc/.gitconfig|3|2|V|gitconfig
+	[http "https://github.com"]
+		proxy = http://127.0.0.1.443
+	[https "https://github.com"]
+		proxy = https://127.0.0.1.443
+d4a973e303ec37692cc8923e3148eef7|file:///home/ljc/.gitconfig|5|27|v|gitconfig
+	8080
+380355fa0aada07ea7b19f26eb4a86b1|file:///home/ljc/.gitconfig|3|2|V|gitconfig
+	[https "https://github.com"]
+		proxy = https://127.0.0.1.443
+	[http "https://github.com"]
+		proxy = http://127.0.0.1.443
+34a57fa375013352939fdcb1cf606048|file:///home/ljc/test1/tests/test.c|8|1|v|c
+	void 
+a0ef863ed8e5cf5da27dab3e4516ba54|file:///home/ljc/test1/tests/test.c|16|1|V|c
+	    fun
+383953eeedbeb253e49baa2255173cf5|file:///home/ljc/test1/tests/test.c|16|1|V|c
+	dd    
+96fadd024f76f251e354165b8751625b|file:///home/ljc/test1/tests/test.c|18|1|V|c
+	    func(a , b);
+a9473ded85aa51851deb4859cdd53f98|file:///home/ljc/test1/tests/test.c|19|13|V|c
+	                
+f8eae6750519389e078e1eb1bcb3d708|file:///home/ljc/Downloads/Neovim-Coc/.git/config|9|8|v|gitconfig
+	https://
+b7407a5487de2fb2e4d13388c27594ff|file:///home/ljc/.gitconfig|5|2|V|gitconfig
+	[http "https://github.com"]
+		proxy = http://127.0.0.1.7890
+	[https "https://github.com"]
+		proxy = https://127.0.0.1.7890
+a7d70152db4d5a6d86f5cd181610a1a0|file:///home/ljc/.gitconfig|5|2|V|gitconfig
+	[https "https://github.com"]
+		proxy = https://127.0.0.1.7890
+	[http "https://github.com"]
+		proxy = http://127.0.0.1.7890
+237469c3669f868ab0e43cd0052d2561|file:///home/ljc/Downloads/test2/Neovim-Coc/README.md|28|1|V|markdown
+	# Q&A  
+	## the first:  
+	[coc.nvim]: Error on initialize: Error: EACCES: permission denied, open '/work/home/.config/coc/memos.json'
+	    at Object.openSync (fs.js:476:3)  
+	    at Object.writeFileSync (fs.js:1467:35)  
+	    at new yE (/work/home/.config/plugged/coc.nvim/build/index.js:202:14884)  
+	    at Xz.init (/work/home/.config/plugged/coc.nvim/build/index.js:219:41882)  
+	    at processTicksAndRejections (internal/process/task_queues.js:93:5)  
+	    at async LP.init (/work/home/.config/plugged/coc.nvim/build/index.js:247:10012)  
+	    at async /work/home/.config/plugged/coc.nvim/build/index.js:129:13510  
+	
+	创建软连接，sudo ln -s  ~/.config/lib/nvim-linux64/share/nvim/ /share/nvim/     
+	这里在.bashrc中添加了环境变量，但是好像不起作用，所以建立连接，让其能访问到nvim目录，语法高亮、主题都在此目录下  
+	
+	## the twice:  
+	[coc.nvim]: UnhandledRejection: EACCES: permission denied, open '/work/home/.config/coc/mru'  
+	Error: EACCES: permission denied, open '/work/home/.config/coc/mru'  
+	    at Object.openSync (fs.js:476:3)  
+	    at Object.writeFileSync (fs.js:1467:35)  
+	    at a0.add (/work/home/.config/plugged/coc.nvim/build/index.js:183:124)  
+	    at processTicksAndRejections (internal/process/task_queues.js:93:5)  
+	
+	给mru这个文件 chmod 666    
+ed392bc4b094fb427479bad7040119af|file:///home/ljc/Downloads/test2/Neovim-Coc/README.md|5|1|V|markdown
+	clang-llvm  .0.0  
+c4d1ce912ce07b56a3447089035403e1|file:///home/ljc/Downloads/test2/Neovim-Coc/README.md|5|59|v|markdown
+	/ .0.0
+dffcf0040c850bcfa2b22db44151d744|file:///home/ljc/Downloads/test2/Neovim-Coc/README.md|3|30|v|markdown
+	/ v14.16.1
+315f2373188e37029088c02b566c25dd|file:///home/ljc/Downloads/test2/Neovim-Coc/README.md|4|13|v|markdown
+	6.14.12   
+695a628d8b3f4b4d3ba1cc7ebd64fc17|file:///home/ljc/Downloads/test2/Neovim-Coc/README.md|2|34|v|markdown
+	v0.5.0-dev+1256-gd19348923    
+4ccf21e2e175148b5451fc5eb4129624|file:///home/ljc/Downloads/test2/Neovim-Coc/README.md|21|30|v|markdown
+	clang+llvm-12.0.0-x86_64-linux-gnu-ubuntu-16.04
+ba415c2f6ae465667aa6ea8805089e0e|file:///home/ljc/.config/nvim/init.vim|149|65|v|vim
+	"enable rainbow for code blocks only
+f33bee21b13fed9a35683c15fa712087|file:///home/ljc/.config/nvim/init.vim|152|86|v|vim
+	"lisp needs more colors for parentheses :)
+085c6f9b87e73279eab30d40505f5eaa|file:///home/ljc/.config/nvim/init.vim|155|111|v|vim
+	"the haskell lang pragmas should be excluded
+943b0b9f1cfd56d66d9f2ea921ad40bb|file:///home/ljc/.config/nvim/init.vim|158|54|v|vim
+	"enable rainbow inside vim function body
+407d423ba823dfae0fd7bed6afb23922|file:///home/ljc/.config/nvim/init.vim|161|47|v|vim
+	"solve the [perl indent-depending-on-syntax problem](https://github.com/luochen1990/rainbow/issues/20)
+5d9ab6427264889d8f0b720191c8ba45|file:///home/ljc/.config/nvim/init.vim|164|72|v|vim
+	"[vim css color](https://github.com/ap/vim-css-color) compatibility
+d1f58f9cdf300752159b21a311e70b1f|file:///home/ljc/.config/nvim/init.vim|166|13|v|vim
+	"disable this plugin for css files
+e1a6d237d7631f7ab8cc954442b7ed6d|file:///home/ljc/.config/nvim/init.vim|167|18|v|vim
+	"rainbow is conflicting with NERDTree, creating extra parentheses
+244d611c5fd2ce161ed5931137dedd91|file:///home/ljc/.config/nvim/init.vim|144|21|V|vim
+	\	'operators': '_,_',
+213c4a50a808db931522fa478d1d5800|file:///home/ljc/test1/tests/test.c|14|5|V|c
+	    _ 
+ef5267ee74087cf2ebb88232431c3f11|file:///home/ljc/test1/tests/README.md|9|1|V|markdown
+	x86_64 
+a71cb4c75fc0ad252480d4d5ddad8f0e|file:///home/ljc/.config/nvim/init.vim|138|1|V|vim
+	let g:rainbow_active = 0
+09baa3c31bda8a421003340be1246ed5|file:///home/ljc/.config/nvim/init.vim|129|1|V|vim
+	Plug 'luochen1990/rainbow'
+95375cf00115274ba3e4dd66d0ba8b47|file:///home/ljc/Downloads/test2/Neovim-Coc/README.md|21|30|v|markdown
+	clang+llvm-17.0.6-x86_64-linux-gnu-ubuntu-22.04
+efd4823b8684e1932a62c6c31f11866c|file:///home/ljc/Downloads/Neovim-Coc/.bashrc|172|1|V|sh
+	#fzf -----------
+	export PATH=~/.fzf/bin/:${PATH}
+	export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
+	[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+1b08b78070db6e303080aa278d52b094|file:///home/ljc/.bashrc|147|1|V|sh
+	[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+b7ecca589ed84cd7e409e0f6f096e0b0|file:///home/ljc/Downloads/Neovim-Coc/.bashrc|177|1|V|sh
+	#ripgrep ----------
+	export PATH=~/.config/lib/ripgrep-13/:${PATH}
+8034bdb42b76bd2a3799785da90877e3|file:///home/ljc/.bashrc|122|1|V|sh
+	#key-bind
+	alias ll='ls -alF'
+	alias la='ls -A'
+	alias ..='cd ../'
+	alias ...='cd ../../'
+	alias ....='cd ../../../'
+	alias .....='cd ../../../../'
+	alias gd='git diff'
+	alias gs='git status'
+	alias gb='git branch'
+	alias gl='git log'
+	alias gll='git log --oneline'
+4d1451756357a3a8abd27e1c66f24758|file:///home/ljc/Downloads/Neovim-Coc/.bashrc|164|1|V|sh
+	#autojump ----------- 
+	[[ -s /home/ts/.autojump/etc/profile.d/autojump.sh ]] && source /home/ts/.autojump/etc/profile.d/autojump.sh
+800f4625a0cb4388cba21d10ca70fd1d|file:///home/ljc/Downloads/Neovim-Coc/.bashrc|167|1|V|sh
+	#cscope ------------
+	#cscope env
+	#CSCOPE=/path/cscope.out
+	#export CSCOPE
+41640e351885d2bfcc36a3888f377c51|file:///home/ljc/.bashrc|141|23|v|sh
+	lib/ripgrep-13

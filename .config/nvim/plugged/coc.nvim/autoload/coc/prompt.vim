@@ -29,6 +29,8 @@ let s:char_map = {
       \ "\<LeftDrag>": '<LeftDrag>',
       \ "\<LeftRelease>": '<LeftRelease>',
       \ "\<2-LeftMouse>": '<2-LeftMouse>',
+      \ "\<C-space>": '<C-space>',
+      \ "\<C-_>": '<C-_>',
       \ "\<C-a>": '<C-a>',
       \ "\<C-b>": '<C-b>',
       \ "\<C-c>": '<C-c>',
@@ -83,7 +85,7 @@ let s:char_map = {
 
 function! coc#prompt#getc() abort
   let c = getchar()
-  return type(c) == type(0) ? nr2char(c) : c
+  return type(c) is 0 ? nr2char(c) : c
 endfunction
 
 function! coc#prompt#getchar() abort
@@ -165,7 +167,9 @@ function! s:start_prompt()
     endwhile
   catch /^Vim:Interrupt$/
     let s:activated = 0
-    call coc#rpc#notify('InputChar', [s:current_session(), '<esc>'])
+    call coc#rpc#notify('InputChar', [s:current_session(), '<esc>', 0])
+    let s:session_names = []
+    call s:reset()
     return
   endtry
   let s:activated = 0
